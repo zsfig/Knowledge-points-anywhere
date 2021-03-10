@@ -8,9 +8,6 @@
             string timeStamp = (dt.Ticks - dateStart.Ticks).ToString().Substring(0, 13);
             return timeStamp;
         }
-        ```
-        
-        ```
         //扩展方法 获取秒级10位时间戳
         public static string ToTimeStampOfSeconds(this DateTime dt)
         {
