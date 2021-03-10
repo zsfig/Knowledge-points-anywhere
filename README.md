@@ -3,9 +3,11 @@
 -居中详解 http://ife.baidu.com/note/detail/id/1549
 
 # json对象的null值处理，转成空字符串""，输出json字符串
+```
 var settings = new JsonSerializerSettings() { ContractResolver= new NullToEmptyStringResolver() };
 var str = JsonConvert.SerializeObject(yourObj, settings);
-
+```
+```
 public class NullToEmptyStringResolver : Newtonsoft.Json.Serialization.DefaultContractResolver
 {
     protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
@@ -40,3 +42,4 @@ public class NullToEmptyStringValueProvider : IValueProvider
         _MemberInfo.SetValue(target, value);
     }
 }
+```
