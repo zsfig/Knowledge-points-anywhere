@@ -1,6 +1,5 @@
 
         
-        ```
         //扩展方法 获取毫秒级13位时间戳
         public static string ToTimeStampOfMileSeconds(this DateTime dt)
         {
@@ -15,4 +14,4 @@
             string timeStamp = (dt.Ticks - dateStart.Ticks).ToString().Substring(0, 10);
             return timeStamp;
         }
-        ```
+        
