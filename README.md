@@ -43,3 +43,7 @@ public class NullToEmptyStringValueProvider : IValueProvider
     }
 }
 ```
+# json字符串转实体类忽略null值
+```
+var jsonSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+```
