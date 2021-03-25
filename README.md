@@ -47,3 +47,13 @@ public class NullToEmptyStringValueProvider : IValueProvider
 ```
 var jsonSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
 ```
+# 递归查询
+可以查询后，再对递归的表进行操作，但是有时候将递归表放在join中会特别慢，可以将值取出来放到临时表中
+
+```
+
+   if object_id('tempdb..#tempTable') is not null
+   begin  drop table #tempTable  end;
+   with cte as(select ID from T1 where parentID='1' union all select T1.ID from position inner join subs on T1.parentID=cte.positionID)
+   select T2.XX into #tempTable from T2  right join cte t2 on t1.XXID=t2.ID
+```
