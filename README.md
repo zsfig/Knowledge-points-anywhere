@@ -1,5 +1,5 @@
 # Knowledge-points-elsewhere
-复制来的知识点们
+
 -居中详解 http://ife.baidu.com/note/detail/id/1549
 
 # json对象的null值处理，转成空字符串""，输出json字符串
