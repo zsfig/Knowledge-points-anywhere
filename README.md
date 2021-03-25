@@ -57,3 +57,7 @@ var jsonSetting = new JsonSerializerSettings { NullValueHandling = NullValueHand
    with cte as(select ID from T1 where parentID='1' union all select T1.ID from position inner join subs on T1.parentID=cte.positionID)
    select T2.XX into #tempTable from T2  right join cte t2 on t1.XXID=t2.ID
 ```
+# 按XXID排序后添加一列自增列
+```
+   select *,ROW_NUMBER()over(partition by XXID order by Time desc )as xx_index  from T1
+```
