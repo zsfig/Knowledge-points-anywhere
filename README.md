@@ -61,3 +61,18 @@ var jsonSetting = new JsonSerializerSettings { NullValueHandling = NullValueHand
 ```
    select *,ROW_NUMBER()over(partition by XXID order by Time desc )as xx_index  from T1
 ```
+# 获取表单中所有textbox
+```
+ foreach (Control control in this.Page.FindControl("form1").Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    //判断非空的textbox的值是否为整数
+                    if (textBox.ID.Contains("amount") && !string.IsNullOrEmpty(textBox.Text) && !int.TryParse(textBox.Text, out int temp))
+                    {
+                        Response.Write("<script>alert('请输入正确的数字')</script>");
+                        return false;
+                    }
+                }
+            }
+```
