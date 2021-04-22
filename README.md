@@ -76,3 +76,5 @@ var jsonSetting = new JsonSerializerSettings { NullValueHandling = NullValueHand
                 }
             }
 ```
+# window.showModalDialog 兼容方法
+https://github.com/niutech/showModalDialog
