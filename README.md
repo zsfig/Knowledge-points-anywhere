@@ -1,6 +1,9 @@
 # Knowledge-points-elsewhere
 
--居中详解 http://ife.baidu.com/note/detail/id/1549
+
+# 数据库表字段='NULL'和 is null注意区别，尤其复制表后
+
+# 居中详解 http://ife.baidu.com/note/detail/id/1549
 
 # json对象的null值处理，转成空字符串""，输出json字符串
 ```
